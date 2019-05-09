@@ -36,7 +36,7 @@ PLAYING = embedded_assistant_pb2.ScreenOutConfig.PLAYING
 class BroadcastMessage(Resource):
     def get(self):
         message = request.args.get('message', default = 'This is a test!')
-        text_query = 'broadcast '+message
+        text_query = 'annuncia '+message
         response_text, response_html = assistant.assist(text_query=text_query)
         logging.debug(response_text)
         return {'status': 'OK'}
